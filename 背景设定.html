@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原来鹅鸭杀是这样产生的...</title>
+<style type="text/css">
+    .menu{                               /*容器*/
+    background:#fde7ff;
+    width:10%;
+    float:left;
+    height:100%;
+    }
+    h1,h2{                                     /*菜单*/
+    text-align:center;
+    color:black;
+    }
+    hr{
+    transform:translate(0,-10px);
+    }
+    h1{
+    font-family:华文新魏;
+    font-size:25px;
+    }
+    h2{
+    font-family:楷体;
+    font-size:30px;
+    }
+    .ph3456{
+    width:100%;
+    }
+    a{                                      /*超链接*/
+    text-decoration:none;
+    }
+    .ph2{                                   /*内容*/
+    width:100%;
+    transform:translate(0,50px);
+    }
+    .roll {
+            display: block;
+            width: 90%;
+            float:left;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .roll_text {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            line-height: 30px;
+            display: block;
+            word-break: keep-all;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: all 20ms linear;
+        }
+</style>
+</head>
+<body onload="rollFn()">
+<div class="menu"><!--左侧部分-->
+    <a href="home.html" target="_blank"><h1>返回首页</h1></a>
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" color=#fffb00 SIZE=5>
+    <a href="游戏介绍.html" target="_blank"><h2>游戏介绍</h2></a>
+    <a href="背景设定.html" target="_blank"><h2>点下一个吧</h2></a>
+    <a href="角色设定.html" target="_blank"><h2>角色设定</h2></a>
+    <a href="场景地图.html" target="_blank"><h2>场景地图</h2></a>
+    <img class="ph3456" src="ph3.jpg"/>
+    <img class="ph3456" src="ph4.jpg"/>
+    <img class="ph3456" src="ph5.jpg"/>
+    <img class="ph3456" src="ph6.jpg"/>
+</div>
+<div class="roll"><!--右侧部分-->
+    <div class="roll_text">
+    一群鹅建造了一艘飞船去探索太空，而鸭子则混入飞船想要破坏。鹅要以小游戏的形式在地图上完成任务，其中包括对重要系统的维护工作。鸭子会伪装
+    成鹅的样子，并会得到虚假的任务清单以便混在鹅之中，他们还可以识别其他鸭子的身份并有能力破坏地图系统、穿越通风口和杀死鹅。鹅需要完成所有
+    任务或找到并投票杀死所有鸭子获胜，而鸭子则需要杀死一定数量的鹅，使剩余的鹅数等同鸭子数或破坏倒计时结束后获胜。
+    </div>
+    <script>
+        function rollFn() {
+            var scrollWidth = document.querySelector(".roll").clientWidth
+            var rollTextDiv = document.querySelector(".roll_text")
+            var textWidth = rollTextDiv.clientWidth
+            console.log(scrollWidth, textWidth)
+            var i = scrollWidth;
+            setInterval(function () {
+                i--
+                if (i < -textWidth) i = scrollWidth
+                rollTextDiv.style.left = i + "px"
+            }, 20);
+        }
+    </script>
+    <div class="pic"><!--图片部分-->
+    <img class="ph2" src="ph2.jpg"/>
+</div>
+</div>
+</body>
+</html>

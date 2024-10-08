@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>赶紧去玩一局活力满满的鹅鸭杀吧！</title>
+<style type="text/css">
+    .menu{                               /*容器*/
+    background:#fde7ff;
+    width:10%;
+    float:left;
+    height:100%;
+    }
+    .content{
+    width:90%;
+    float:right;
+    }
+    h1,h2{                                     /*菜单*/
+    text-align:center;
+    color:black;
+    }
+    hr{
+    transform:translate(0,-10px);
+    }
+    h1{
+    font-family:华文新魏;
+    font-size:25px;
+    }
+    h2{
+    font-family:楷体;
+    font-size:30px;
+    }
+    .ph3456{
+    width:100%;
+    }
+    a{                                      /*超链接*/
+    text-decoration:none;
+    }
+    .right{
+    width:90%;
+    float:left;
+    }
+</style>
+<script>
+    function showConfirm() {
+      var result = confirm("是否继续创建游戏？");
+      if (result) {
+        alert("您已经成功学会了如何创建一局鹅鸭杀游戏，快来一局真正的鹅鸭杀吧！");
+      } else {
+        alert("请问您是有什么心事吗？");
+      }
+    }
+</script>
+</head>
+<body>
+<div class="menu"><!--左侧部分-->
+    <a href="home.html" target="_blank"><h1>返回首页</h1></a>
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" color=#fffb00 SIZE=5>
+    <a href="游戏介绍.html" target="_blank"><h2>游戏介绍</h2></a>
+    <a href="背景设定.html" target="_blank"><h2>背景设定</h2></a>
+    <a href="角色设定.html" target="_blank"><h2>角色设定</h2></a>
+    <a href="场景地图.html" target="_blank"><h2>来局鹅鸭杀吧</h2></a>
+    <img class="ph3456" src="ph3.jpg"/>
+    <img class="ph3456" src="ph4.jpg"/>
+    <img class="ph3456" src="ph5.jpg"/>
+    <img class="ph3456" src="ph6.jpg"/>
+</div>
+<div class="right">
+    <h3>一、场景模拟</h3>
+<form>
+    <table border="1" rules="all">
+        <tr><td>游戏昵称：</td><td><input type="text" name="name" size="20"></td></tr>
+        <tr><td>人物配置</td><td>
+            <p><input type="radio">鹈鹕
+                                <input type="radio">猎鹰
+                                <input type="checkbox">正义使者
+                                <input type="checkbox">警长
+                                <input type="checkbox">复仇者
+                                <input type="checkbox">加拿大鹅</p>
+            <p><input type="checkbox">侦探
+                <input type="checkbox">殡仪员
+                <input type="checkbox">工程师
+                <input type="checkbox">模仿者
+                <input type="checkbox">通灵者
+                <input type="checkbox">肉汁
+            </p>
+            <p><input type="checkbox">刺客
+                <input type="checkbox">变形
+                <input type="checkbox">隐形
+                <input type="checkbox">专业杀手
+                <input type="checkbox">身份窃贼
+                <input type="checkbox">间谍
+            </p>
+        </td></tr>
+        <tr><td>>>>>>></td><td><button onclick="showConfirm()">创建游戏</button></tr>
+</table>
+</form>
+    <h3>二、地图展示</h3>
+    <ol type=”1”>
+    <li>地下室</li>
+    <text>在地下室有很大一块区域都是阴暗地带，这些区域需要仔细观察，都是坏人经常出没的场所。</text>
+    <img class="ph3456" src="ph7.jpg"/>
+    <li>鹅教堂</li>
+    <text>鹅教堂的建筑物布局非常的密集，很适合鸭子对落单的鹅动刀，因此做任务的时候最好与同伴结伴而行。</text>
+    <img class="ph3456" src="ph8.jpg"/>
+    <li>马拉德庄园</li>
+    <text>马拉德庄园整体通过狭窄的走廊连通，并且整张地图灯火通明，坏人阵营的动刀难度较大。</text>
+    <img class="ph3456" src="ph9.jpg"/>
+    <li>连结殖民地</li>
+    <text>地图整体被分成了两块，通过传送器可以在两块地图上自由传送，不过要注意不要单人行动。</text>
+    <img class="ph3456" src="ph10.jpg"/>
+    <li>黑天鹅</li>
+    <text>部分房间没有灯光，请记住这些房间以防坏人动刀。在桥梁中有多个任务，但要小心环境杀。</text>
+    <img class="ph3456" src="ph11.jpg"/>
+    <li>老妈鹅星球飞船</li>
+    <text>地图形象较为奇特，整体像一只大鹅。</text>
+    <img class="ph3456" src="ph12.jpg"/>
+    <li>古代沙地</li>
+    <text>会随机刮沙尘暴，导致所有人的视野降低并看不见名字，而室内则不会。</text>
+    <img class="ph3456" src="ph13.jpg"/>
+    <li>丛林神殿</li>
+    <text>容易产生环境杀，需要小心丛林中存在的危险，不同区域中场景会存在差距。</text>
+    <img class="ph3456" src="ph14.jpg"/>
+    </ol>
+</div>
+</body>
+</html>
